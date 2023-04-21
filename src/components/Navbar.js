@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -7,13 +8,13 @@ const Navbar = () => {
             <h1 className='text-3xl font-bold font-mono'>yourFinance</h1>
         </div>
         <div className='list-none flex justify-around w-3/5 h-20 items-center'>
-			<li className='hover:cursor-pointer'>Home</li>
-			<li className='hover:cursor-pointer'>Investments</li>
-			<li className='hover:cursor-pointer'>Bills</li>
-			<li className='hover:cursor-pointer'>About Us</li>
+			<Link to="/"><li className='hover:cursor-pointer'>Home</li></Link>
+			<Link to="/investments"><li className='hover:cursor-pointer'>Investments</li></Link>
+			<Link to="/bills"><li className='hover:cursor-pointer'>Bills</li></Link>
+			<Link to="/about"><li className='hover:cursor-pointer'>About Us</li></Link>
         </div>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;
